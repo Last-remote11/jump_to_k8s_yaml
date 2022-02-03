@@ -1,10 +1,11 @@
-apiVersion: v1
+apiVersion: v1    # 모든 리소스가 apiVersion을 가지고 있음. 리소스의 이름 출동을 막기 위해 scope를 정의한 것 
 kind: Pod       # 나는pod입니다.
 metadata:
   labels:
     hello: world      # 라벨 추가(키: 값)
   name: mynginx
-spec:
+spec:   # 리소스의 스펙을 정의 
   containers:
   - name: mynginx
     image: nginx     # 컨테이너 이미지 주소
+  restartPolicy: Never

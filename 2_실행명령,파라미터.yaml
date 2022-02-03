@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cmd
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: nginx
+    image: nginx
+    command: ["bin/echo"] # 컨테이너가 생성될 때 실행할 명령
+    args: ["hello"] # 위의 명령에 들어갈 파라미터
